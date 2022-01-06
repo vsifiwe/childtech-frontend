@@ -24,7 +24,7 @@ function CoursePage() {
 			return navigate("/login");
 		}
 		axios
-			.get("http://childtech.herokuapp.com/api/courses/paid", config)
+			.get("https://childtech.herokuapp.com/api/courses/paid", config)
 			.then((response) => {
 				console.log(response.data);
 				setIsloading(false);
