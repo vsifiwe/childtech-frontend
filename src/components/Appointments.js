@@ -272,7 +272,7 @@ function Appointments() {
 																</div>
 																<div class="ml-3">
 																	<p class="text-gray-900 whitespace-no-wrap">
-																		{app.first_name + " " + app.last_name}
+																		{app.parent_name}
 																	</p>
 																</div>
 															</div>

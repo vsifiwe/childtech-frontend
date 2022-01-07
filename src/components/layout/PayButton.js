@@ -12,7 +12,7 @@ function PayButton({ course, user }) {
 		currency: "RWF",
 		payment_options: "card,mobilemoney,ussd",
 		customer: {
-			email: "asifiwemanzi@gmail.com",
+			email: "childtech@gmail.com",
 			phonenumber: "0788427257",
 			name: "Manzi Asifiwe",
 		},
