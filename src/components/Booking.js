@@ -104,6 +104,7 @@ function Booking() {
 
 		let pdate = parentPrefDate.replace(" ", "T");
 		let cdate = childBirth.replace(" ", "T");
+		cdate = cdate + ":00.000Z";
 		let pdata = {
 			parent_name: parentName,
 			parent_id: parentID,
@@ -114,13 +115,16 @@ function Booking() {
 			desired_time: pdate,
 			child_name: childName,
 			child_dob: cdate,
-			program: parentProgram,
-			course: parentCourse,
+			program: parseInt(parentProgram),
+			course: parseInt(parentCourse),
 		};
+
+		console.log(pdata);
 
 		axios
 			.post(
 				"https://childtech.herokuapp.com/api/appointment/parent/create",
+				// "http://127.0.0.1:8000/api/appointment/parent/create",
 				pdata
 			)
 			.then((response) => {
@@ -217,6 +221,7 @@ function Booking() {
 		event.preventDefault();
 
 		let date = schooolPrefDate.replace(" ", "T");
+		date = date + ":00.000Z";
 
 		let data = {
 			head_name: schoolHead,
@@ -233,6 +238,7 @@ function Booking() {
 
 		axios
 			.post(
+				// "http://127.0.0.1:8000/api/appointment/school/create",
 				"https://childtech.herokuapp.com/api/appointment/school/create",
 				data
 			)
@@ -447,7 +453,7 @@ function Booking() {
 											<Form.Group as={Col} controlId="formGridPhone">
 												<Form.Label>Prefered studing Date</Form.Label>
 												<Form.Control
-													type="date"
+													type="datetime-local"
 													placeholder=""
 													value={parentPrefDate}
 													onChange={handleparentPrefDateChange}
