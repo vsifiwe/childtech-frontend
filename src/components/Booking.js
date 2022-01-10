@@ -102,9 +102,10 @@ function Booking() {
 	let handleParentSubmit = (event) => {
 		event.preventDefault();
 
-		let pdate = parentPrefDate.replace(" ", "T");
-		let cdate = childBirth.replace(" ", "T");
-		cdate = cdate + ":00.000Z";
+		// let pdate = parentPrefDate.replace(" ", "T");
+		// let cdate = childBirth.replace(" ", "T");
+		let pdate = parentPrefDate + "T00:00:00.000Z";
+		let cdate = childBirth + "T00:00:00.000Z";
 		let pdata = {
 			parent_name: parentName,
 			parent_id: parentID,
@@ -119,7 +120,7 @@ function Booking() {
 			course: parseInt(parentCourse),
 		};
 
-		console.log(pdata);
+		// console.log(pdata);
 
 		axios
 			.post(
@@ -390,7 +391,7 @@ function Booking() {
 											<Form.Group as={Col} controlId="formGridPhone">
 												<Form.Label>Child's Birth Date</Form.Label>
 												<Form.Control
-													type="datetime-local"
+													type="date"
 													placeholder=""
 													value={childBirth}
 													onChange={handleChildBirthChange}
@@ -453,7 +454,7 @@ function Booking() {
 											<Form.Group as={Col} controlId="formGridPhone">
 												<Form.Label>Prefered studing Date</Form.Label>
 												<Form.Control
-													type="datetime-local"
+													type="date"
 													placeholder=""
 													value={parentPrefDate}
 													onChange={handleparentPrefDateChange}
@@ -575,7 +576,7 @@ function Booking() {
 											<Form.Group as={Col} controlId="formGridPhone">
 												<Form.Label>Prefered Date</Form.Label>
 												<Form.Control
-													type="datetime-local"
+													type="date"
 													placeholder=""
 													value={schooolPrefDate}
 													onChange={handleSchoolPrefDateChange}
