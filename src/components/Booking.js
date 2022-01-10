@@ -221,8 +221,7 @@ function Booking() {
 	let handleSchoolSubmit = (event) => {
 		event.preventDefault();
 
-		let date = schooolPrefDate.replace(" ", "T");
-		date = date + ":00.000Z";
+		let date = schooolPrefDate + "T00:00:00.000Z";
 
 		let data = {
 			head_name: schoolHead,
