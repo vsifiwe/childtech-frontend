@@ -45,7 +45,7 @@ function Admin() {
 								<ul class="space-y-10">
 									<li>
 										<Link
-											to="/"
+											to="/coursepagepaid"
 											class="flex items-center text-sm font-semibold text-gray-500 hover:text-blue-500 transition duration-200"
 										>
 											<svg
