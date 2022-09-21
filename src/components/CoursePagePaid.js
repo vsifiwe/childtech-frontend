@@ -6,6 +6,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const token = localStorage.getItem("token");
+console.log(token)
 const token1 = `Bearer ${token}`;
 const config = {
 	headers: {
@@ -24,7 +25,7 @@ function CoursePage() {
 			return navigate("/login");
 		}
 		axios
-			.get("https://childtech.herokuapp.com/api/courses/paid", config)
+			.get("http://127.0.0.1:8000/api/courses/paid", config)
 			.then((response) => {
 				console.log(response.data);
 				setIsloading(false);

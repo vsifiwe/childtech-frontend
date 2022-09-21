@@ -12,7 +12,7 @@ function Admin() {
 	});
 
 	useEffect(() => {
-		axios.get("https://childtech.herokuapp.com/api/data/").then((response) => {
+		axios.get("http://127.0.0.1:8000/api/data/").then((response) => {
 			console.log(response.data);
 			setData(response.data);
 		});

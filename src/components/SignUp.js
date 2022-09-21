@@ -49,7 +49,7 @@ export default function SignUp() {
             "password":password
         }
 
-        axios.post('https://childtech.herokuapp.com/api/register',data)
+        axios.post('http://127.0.0.1:8000/api/register',data)
         .then(response => {
             console.log(response)
             if(response.status == 200) {
@@ -60,6 +60,7 @@ export default function SignUp() {
         })
         .catch((error) => {
             console.log("An error occured");
+            console.log(error)
         })
         
     }

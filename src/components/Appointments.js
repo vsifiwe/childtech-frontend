@@ -18,7 +18,7 @@ function Appointments() {
 
 	useEffect(() => {
 		axios
-			.get("https://childtech.herokuapp.com/api/appointment/", config)
+			.get("http://127.0.0.1:8000/api/appointment/", config)
 			.then((response) => {
 				console.log(response.data.data);
 				setAppointments(response.data.data);

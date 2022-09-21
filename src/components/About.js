@@ -46,7 +46,7 @@ function About() {
 		};
 
 		axios
-			.post("https://childtech.herokuapp.com/api/contact/", data)
+			.post("http://127.0.0.1:8000/api/contact/", data)
 			.then((response) => alert(response.data.message));
 	};
 	return (

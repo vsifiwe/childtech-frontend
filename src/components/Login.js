@@ -27,12 +27,11 @@ function Login() {
 		event.preventDefault();
 
 		axios
-			.post("https://childtech.herokuapp.com/api/token/", {
+			.post("http://127.0.0.1:8000/api/token/", {
 				username: username,
 				password: password,
 			})
 			.then((response) => {
-				console.log(response);
 				if (response.status === 200) {
 					window.localStorage.setItem("token", response.data.access);
 					const decoded = jwt_decode(response.data.access);

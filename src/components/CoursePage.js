@@ -25,7 +25,7 @@ function CoursePage() {
 			return navigate("/login");
 		}
 		axios
-			.get("https://childtech.herokuapp.com/api/courses/")
+			.get("http://127.0.0.1:8000/api/courses/")
 			.then((response) => {
 				console.log(response.data);
 				setIsloading(false);

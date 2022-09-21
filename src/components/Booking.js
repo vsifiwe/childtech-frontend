@@ -124,7 +124,7 @@ function Booking() {
 
 		axios
 			.post(
-				"https://childtech.herokuapp.com/api/appointment/parent/create",
+				"http://127.0.0.1:8000/api/appointment/parent/create",
 				// "http://127.0.0.1:8000/api/appointment/parent/create",
 				pdata
 			)
@@ -239,7 +239,7 @@ function Booking() {
 		axios
 			.post(
 				// "http://127.0.0.1:8000/api/appointment/school/create",
-				"https://childtech.herokuapp.com/api/appointment/school/create",
+				"http://127.0.0.1:8000/api/appointment/school/create",
 				data
 			)
 			.then((response) => {
@@ -278,8 +278,8 @@ function Booking() {
 	useEffect(() => {
 		axios
 			.all([
-				axios.get(`https://childtech.herokuapp.com/api/programs/`),
-				axios.get(`https://childtech.herokuapp.com/api/courses/`),
+				axios.get(`http://127.0.0.1:8000/api/programs/`),
+				axios.get(`http://127.0.0.1:8000/api/courses/`),
 			])
 			.then(
 				axios.spread((programs, courses) => {
