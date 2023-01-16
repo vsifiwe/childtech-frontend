@@ -421,9 +421,9 @@ function Booking() {
 												onChange={(e) => parentsIntake(e)}
 												defaultValue="Choose..."
 											>
-												<option value="3">Weekend</option>
-												<option value="5"> Holiday</option>
-												<option value="4">Online</option>
+												<option value="1">Weekend</option>
+												<option value="1"> Holiday</option>
+												<option value="1">Online</option>
 											</Form.Select>
 										</Form.Group>
 										<div style={chooseInitake}>
